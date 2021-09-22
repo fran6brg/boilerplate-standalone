@@ -1,0 +1,14 @@
+# Install all needed dependencies
+npm install --save-dev husky
+
+# Activate husky
+npx husky install
+
+# Add some git hook, on each commit:
+# 1) Run the tsc command to make sure there are no TypeScript errors
+# 2) Run the eslint command to make sure there are no ESLint errors
+# 3) Format our code using prettier
+npx husky add .husky/pre-commit \
+    "npx tsc --noEmit && \
+    npm run lint:fix src && \
+    npx prettier --write src"

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   env: {
     browser: true,
@@ -11,6 +12,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
 
     // Default prettier rules
+    // NB: To be added last. This will turn off eslint rules conflicting with prettier
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
@@ -19,5 +21,8 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["@typescript-eslint"],
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+  },
 };
