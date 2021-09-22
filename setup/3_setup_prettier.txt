@@ -1,0 +1,10 @@
+# Install all needed dependencies
+npm install --save-dev \
+    eslint-config-prettier \
+    eslint-plugin-prettier \
+    prettier
+
+# Add this line in .eslintrc.js/extends: "plugin:prettier/recommended",
+
+# Make sure prettier plugin for vscode is installed
+# And then reload window

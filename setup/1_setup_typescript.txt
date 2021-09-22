@@ -1,0 +1,16 @@
+# Init npm
+npm init -y
+
+# Install needed dependencies
+npm install --save-dev typescript
+
+# Create first typescript file
+mkdir src
+touch src/index.ts
+echo "const mood: string = 'stonks';" > src/index.ts
+
+# Build
+npx tsc
+
+# Watch mode
+npx tsc -w
